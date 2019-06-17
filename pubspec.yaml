@@ -1,8 +1,8 @@
 name: date_picker_number
 description: Easy in use date picker supported by numerical keyboard.
 version: 1.0.0
-author: Marcin Butanowicz
-homepage: m.butan@gmail.com
+author: Marcin Butanowicz <m.butan@gmail.com>
+homepage: https://github.com/mbutan/DatePickerNumber
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
