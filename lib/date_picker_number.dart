@@ -96,8 +96,24 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                 widget.settings.inputFieldPadding,
                 widget.settings.inputFieldWidth,
                 [
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.day, 0), widget.settings, InputFieldType.day, 0, isDayValidated, _viewModel.isFocusedInput(InputFieldType.day, 0), _inputStream),
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.day, 1), widget.settings, InputFieldType.day, 1, isDayValidated, _viewModel.isFocusedInput(InputFieldType.day, 1), _inputStream),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.day, 0),
+                    widget.settings, InputFieldType.day,
+                    0,
+                    isDayValidated,
+                    _viewModel.isFocusedInput(InputFieldType.day, 0),
+                    widget.settings.hintDay,
+                    _inputStream
+                  ),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.day, 1),
+                    widget.settings, InputFieldType.day,
+                    1,
+                    isDayValidated,
+                    _viewModel.isFocusedInput(InputFieldType.day, 1),
+                    widget.settings.hintDay,
+                    _inputStream
+                  ),
                 ],
               ),
             ),
@@ -109,8 +125,26 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                 widget.settings.inputFieldPadding,
                 widget.settings.inputFieldWidth,
                 [
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.month, 0), widget.settings, InputFieldType.month, 0, isMonthValidated, _viewModel.isFocusedInput(InputFieldType.month, 0), _inputStream),
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.month, 1), widget.settings, InputFieldType.month, 1, isMonthValidated, _viewModel.isFocusedInput(InputFieldType.month, 1), _inputStream),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.month, 0),
+                    widget.settings,
+                    InputFieldType.month,
+                    0,
+                    isMonthValidated,
+                    _viewModel.isFocusedInput(InputFieldType.month, 0),
+                    widget.settings.hintMonth,
+                    _inputStream
+                  ),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.month, 1),
+                    widget.settings,
+                    InputFieldType.month,
+                    1,
+                    isMonthValidated,
+                    _viewModel.isFocusedInput(InputFieldType.month, 1),
+                    widget.settings.hintMonth,
+                    _inputStream
+                  ),
                 ],
               ),
             ),
@@ -122,10 +156,42 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                 widget.settings.inputFieldPadding,
                 widget.settings.inputFieldWidth,
                 [
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.year, 0), widget.settings, InputFieldType.year, 0, isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 0), _inputStream),
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.year, 1), widget.settings, InputFieldType.year, 1, isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 1), _inputStream),
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.year, 2), widget.settings, InputFieldType.year, 2, isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 2), _inputStream),
-                  InputFieldWidget(_viewModel.valueFor(InputFieldType.year, 3), widget.settings, InputFieldType.year, 3, isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 3), _inputStream),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.year, 0),
+                    widget.settings,
+                    InputFieldType.year,
+                    0,
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 0),
+                    widget.settings.hintYear,
+                    _inputStream
+                  ),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.year, 1),
+                    widget.settings,
+                    InputFieldType.year,
+                    1,
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 1),
+                    widget.settings.hintYear,
+                    _inputStream
+                  ),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.year, 2),
+                    widget.settings,
+                    InputFieldType.year,
+                    2,
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 2),
+                    widget.settings.hintYear,
+                    _inputStream
+                  ),
+                  InputFieldWidget(
+                    _viewModel.valueFor(InputFieldType.year, 3),
+                    widget.settings,
+                    InputFieldType.year,
+                    3,
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 3),
+                    widget.settings.hintYear,
+                    _inputStream
+                  ),
                 ],
               ),
             ),

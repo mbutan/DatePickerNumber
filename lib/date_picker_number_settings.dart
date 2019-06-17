@@ -8,6 +8,12 @@ class DatePickerNumberSettings {
 
   final int initialYear;
 
+  final String hintDay;
+
+  final String hintMonth;
+
+  final String hintYear;
+
   // Translations
   final String dayHeaderText;
 
@@ -35,15 +41,20 @@ class DatePickerNumberSettings {
 
   final TextStyle inputStyle;
 
+  final TextStyle hintStyle;
+
   final double inputFieldWidth;
 
   const DatePickerNumberSettings({
     this.initialDay,
     this.initialMonth,
     this.initialYear,
-    this.dayHeaderText,
-    this.monthHeaderText,
-    this.yearHeaderText,
+    this.hintDay = 'D',
+    this.hintMonth = 'M',
+    this.hintYear = 'Y',
+    this.dayHeaderText = 'Day',
+    this.monthHeaderText = 'Month',
+    this.yearHeaderText = 'Year',
     this.errorBorder = const UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
     this.enabledBorder = const UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
     this.disabledBorder = const UnderlineInputBorder(borderSide: BorderSide(color: Colors.green)),
@@ -52,7 +63,8 @@ class DatePickerNumberSettings {
     this.errorTextStyle = const TextStyle(color: Colors.red),
     this.headerTextStyle = const TextStyle(color: Colors.grey),
     this.inputStyle = const TextStyle(color: Colors.black),
+    this.hintStyle = const TextStyle(color: Colors.grey),
     this.inputFieldPadding = const EdgeInsets.all(5),
-    this.inputFieldWidth = 30,
+    this.inputFieldWidth = 22,
   });
 }

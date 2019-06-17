@@ -17,6 +17,8 @@ class InputFieldWidget extends StatefulWidget {
 
   final bool isValidated;
 
+  final String hintText;
+
   final StreamController<StreamInputData> inputStream;
 
   InputFieldWidget(
@@ -26,6 +28,7 @@ class InputFieldWidget extends StatefulWidget {
     this.index,
     this.isValidated,
     this.isFocused,
+    this.hintText,
     this.inputStream
   );
 
@@ -74,7 +77,7 @@ class _InputFieldState extends State<InputFieldWidget> {
           maxLength: 1,
           maxLines: 1,
           style: widget.settings.inputStyle,
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.left,
           textInputAction: TextInputAction.next,
           onChanged: (text) {
             widget.inputStream.sink.add(StreamInputData(widget.type, widget.index, text));
@@ -82,6 +85,8 @@ class _InputFieldState extends State<InputFieldWidget> {
           decoration: InputDecoration(
             counterText: '',
             helperText: '',
+            hintText: widget.hintText,
+            hintStyle: widget.settings.hintStyle,
             errorText: widget.isValidated ? null : '',
             errorBorder: widget.settings.errorBorder,
             enabledBorder: widget.settings.enabledBorder,

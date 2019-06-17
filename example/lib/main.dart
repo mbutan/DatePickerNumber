@@ -44,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
             dayHeaderText: 'Day',
             monthHeaderText: 'Month',
             yearHeaderText: 'Year',
+            hintDay: 'D',
+            hintMonth: 'M',
+            hintYear: 'Y',
             errorBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
             enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
             disabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: Colors.black)),
@@ -52,8 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
             errorTextStyle: const TextStyle(color: Colors.red),
             headerTextStyle: const TextStyle(color: Colors.grey),
             inputStyle: const TextStyle(color: Colors.black),
+            hintStyle: const TextStyle(color: Colors.grey),
             inputFieldPadding: const EdgeInsets.all(5),
-            inputFieldWidth: 30,
+            inputFieldWidth: 22,
           ),
           (day) {
             return day > 0 && day < 32 ? null : 'The Day does not match a Date Format.';
