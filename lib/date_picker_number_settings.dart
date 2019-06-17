@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FlutterDatePickerNumberSettings {
+class DatePickerNumberSettings {
   // Initial Values
   final int initialDay;
 
@@ -37,7 +37,7 @@ class FlutterDatePickerNumberSettings {
 
   final double inputFieldWidth;
 
-  const FlutterDatePickerNumberSettings({
+  const DatePickerNumberSettings({
     this.initialDay,
     this.initialMonth,
     this.initialYear,

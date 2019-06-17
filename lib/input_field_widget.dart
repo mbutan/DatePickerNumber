@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import 'flutter_date_picker_number_settings.dart';
+import 'date_picker_number_settings.dart';
 import 'input_model.dart';
 
 class InputFieldWidget extends StatefulWidget {
   final String initialValue;
 
-  final FlutterDatePickerNumberSettings settings;
+  final DatePickerNumberSettings settings;
 
   final InputFieldType type;
 

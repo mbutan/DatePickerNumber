@@ -14,14 +14,14 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_date_picker_number: "^1.0.0"
+  date_picker_number: "^1.0.0"
 ```
 
 In your library add the following import:
 
 ```dart
-import 'package:flutter_date_picker_number/flutter_date_picker_number.dart';
-import 'package:flutter_date_picker_number/flutter_date_picker_number_Settings.dart';
+import 'package:date_picker_number/date_picker_number.dart';
+import 'package:date_picker_number/date_picker_number_Settings.dart';
 ```
 
 For help getting started with Flutter, view the online [documentation](https://flutter.io/).
@@ -30,8 +30,8 @@ For help getting started with Flutter, view the online [documentation](https://f
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_date_picker_number/flutter_date_picker_number.dart';
-import 'package:flutter_date_picker_number/flutter_date_picker_number_Settings.dart';
+import 'package:date_picker_number/date_picker_number.dart';
+import 'package:date_picker_number/date_picker_number_Settings.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,8 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: FlutterDatePickerNumber(
-          FlutterDatePickerNumberSettings(
+        child: DatePickerNumber(
+          DatePickerNumberSettings(
             initialDay: 25,
             initialMonth: 11,
             initialYear: 2019,
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ## Changelog
 
-Please see the [Changelog](https://github.com/rajeshzmoke/flutter_date_picker/blob/master/CHANGELOG.md) page to know what's recently changed.
+Please see the [Changelog](CHANGELOG.md) page to know what's recently changed.
 
 ## License
 

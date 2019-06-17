@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'flutter_date_picker_number_settings.dart';
+import 'date_picker_number_settings.dart';
 import 'input_section_widget.dart';
 import 'input_field_widget.dart';
 import 'input_model.dart';
 
-class FlutterDatePickerNumber extends StatefulWidget {
-  final FlutterDatePickerNumberSettings settings;
+class DatePickerNumber extends StatefulWidget {
+  final DatePickerNumberSettings settings;
 
   final String Function(int) dayValidator;
 
@@ -18,13 +18,13 @@ class FlutterDatePickerNumber extends StatefulWidget {
 
   final String Function(int day, int month, int year) onDateCallback;
 
-  FlutterDatePickerNumber(this.settings, this.dayValidator, this.monthValidator, this.yearValidator, this.onDateCallback);
+  DatePickerNumber(this.settings, this.dayValidator, this.monthValidator, this.yearValidator, this.onDateCallback);
 
   @override
-  State<StatefulWidget> createState() => _FlutterDatePickerNumberState();
+  State<StatefulWidget> createState() => _DatePickerNumberState();
 }
 
-class _FlutterDatePickerNumberState extends State<FlutterDatePickerNumber> {
+class _DatePickerNumberState extends State<DatePickerNumber> {
 
   _ViewModel _viewModel;
 

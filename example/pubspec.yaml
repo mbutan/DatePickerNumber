@@ -21,7 +21,7 @@ dependencies:
     sdk: flutter
 
   # Flutter Date picker number
-  flutter_date_picker_number: ^1.0.0
+  date_picker_number: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

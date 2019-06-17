@@ -41,7 +41,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_date_picker_number:
+  date_picker_number:
     dependency: "direct main"
     description:
       path: ".."

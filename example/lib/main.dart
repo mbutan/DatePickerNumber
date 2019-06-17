@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_date_picker_number/flutter_date_picker_number.dart';
-import 'package:flutter_date_picker_number/flutter_date_picker_number_settings.dart';
+import 'package:date_picker_number/date_picker_number.dart';
+import 'package:date_picker_number/date_picker_number_settings.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: FlutterDatePickerNumber(
-          FlutterDatePickerNumberSettings(
+        child: DatePickerNumber(
+          DatePickerNumberSettings(
             initialDay: 25,
             initialMonth: 11,
             initialYear: 2019,
