@@ -1,11 +1,11 @@
 name: date_picker_number
-description: Easy in use date picker supported by numerical keyboard.
+description: Easy in use date picker supported by numerical keyboard with custom error validation.
 version: 1.0.2
 author: Marcin Butanowicz <m.butan@gmail.com>
 homepage: https://github.com/mbutan/DatePickerNumber
 
 environment:
-  sdk: ">=2.1.0"
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   flutter:
