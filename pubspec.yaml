@@ -5,7 +5,7 @@ author: Marcin Butanowicz <m.butan@gmail.com>
 homepage: https://github.com/mbutan/DatePickerNumber
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.1.0"
 
 dependencies:
   flutter:
