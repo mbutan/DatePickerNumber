@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DatePickerNumberSettings {
+  final bool isFocusKeyboard;
+
   // Initial Values
   final int initialDay;
 
@@ -46,6 +48,7 @@ class DatePickerNumberSettings {
   final double inputFieldWidth;
 
   const DatePickerNumberSettings({
+    this.isFocusKeyboard = true,
     this.initialDay,
     this.initialMonth,
     this.initialYear,

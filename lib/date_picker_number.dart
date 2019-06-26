@@ -16,7 +16,7 @@ class DatePickerNumber extends StatefulWidget {
 
   final String Function(int) yearValidator;
 
-  final String Function(int day, int month, int year) onDateCallback;
+  final String Function(int day, int month, int year, bool isValidated) onDateCallback;
 
   DatePickerNumber(this.settings, this.dayValidator, this.monthValidator, this.yearValidator, this.onDateCallback);
 
@@ -27,6 +27,8 @@ class DatePickerNumber extends StatefulWidget {
 class _DatePickerNumberState extends State<DatePickerNumber> {
 
   _ViewModel _viewModel;
+
+  bool _validatedDate = false;
 
   final StreamController<StreamInputData> _inputStream = StreamController();
 
@@ -42,7 +44,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
           int month = _viewModel.month();
           int year = _viewModel.year();
           if (day != null && month != null && year != null) {
-            widget.onDateCallback(day, month, year);
+            widget.onDateCallback(day, month, year, _validatedDate);
           }
         });
       }
@@ -79,6 +81,8 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
     bool isMonthValidated = monthValidated == null;
     bool isYearValidated = yearValidated == null;
 
+    _validatedDate = isDayValidated && isMonthValidated && isYearValidated;
+
     String errorMessage = dayValidated ?? monthValidated ?? yearValidated ?? '';
 
     return Column(
@@ -101,7 +105,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings, InputFieldType.day,
                     0,
                     isDayValidated,
-                    _viewModel.isFocusedInput(InputFieldType.day, 0),
+                    _viewModel.isFocusedInput(InputFieldType.day, 0) && widget.settings.isFocusKeyboard,
                     widget.settings.hintDay,
                     _inputStream
                   ),
@@ -110,7 +114,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings, InputFieldType.day,
                     1,
                     isDayValidated,
-                    _viewModel.isFocusedInput(InputFieldType.day, 1),
+                    _viewModel.isFocusedInput(InputFieldType.day, 1) && widget.settings.isFocusKeyboard,
                     widget.settings.hintDay,
                     _inputStream
                   ),
@@ -131,7 +135,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     InputFieldType.month,
                     0,
                     isMonthValidated,
-                    _viewModel.isFocusedInput(InputFieldType.month, 0),
+                    _viewModel.isFocusedInput(InputFieldType.month, 0) && widget.settings.isFocusKeyboard,
                     widget.settings.hintMonth,
                     _inputStream
                   ),
@@ -141,7 +145,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     InputFieldType.month,
                     1,
                     isMonthValidated,
-                    _viewModel.isFocusedInput(InputFieldType.month, 1),
+                    _viewModel.isFocusedInput(InputFieldType.month, 1) && widget.settings.isFocusKeyboard,
                     widget.settings.hintMonth,
                     _inputStream
                   ),
@@ -161,7 +165,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings,
                     InputFieldType.year,
                     0,
-                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 0),
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 0) && widget.settings.isFocusKeyboard,
                     widget.settings.hintYear,
                     _inputStream
                   ),
@@ -170,7 +174,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings,
                     InputFieldType.year,
                     1,
-                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 1),
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 1) && widget.settings.isFocusKeyboard,
                     widget.settings.hintYear,
                     _inputStream
                   ),
@@ -179,7 +183,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings,
                     InputFieldType.year,
                     2,
-                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 2),
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 2) && widget.settings.isFocusKeyboard,
                     widget.settings.hintYear,
                     _inputStream
                   ),
@@ -188,7 +192,7 @@ class _DatePickerNumberState extends State<DatePickerNumber> {
                     widget.settings,
                     InputFieldType.year,
                     3,
-                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 3),
+                    isYearValidated,_viewModel.isFocusedInput(InputFieldType.year, 3) && widget.settings.isFocusKeyboard,
                     widget.settings.hintYear,
                     _inputStream
                   ),

@@ -14,7 +14,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  date_picker_number: "^1.0.1"
+  date_picker_number: "^1.0.2"
 ```
 
 In your library add the following import:
